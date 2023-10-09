@@ -183,6 +183,7 @@ module.exports = webpackAsyncContext;
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -264,7 +265,7 @@ module.exports = webpackAsyncContext;
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -354,9 +355,9 @@ asset output.js 11.3 KiB [emitted] (name: main)
 asset 548.output.js 858 bytes [emitted] (name: chunk-bar-baz2)
 asset 791.output.js 858 bytes [emitted] (name: chunk-bar-baz0)
 asset 930.output.js 858 bytes [emitted] (name: chunk-foo)
-chunk (runtime: main) output.js (main) 565 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 565 bytes (javascript) 5.5 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.5 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 405 bytes [built] [code generated]
     [used exports unknown]
@@ -385,7 +386,7 @@ chunk (runtime: main) 930.output.js (chunk-foo) 38 bytes [rendered]
     [used exports unknown]
     import() ./templates/foo ./example.js 1:0-62
     cjs require ./templates/foo ./example.js 6:11-37
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -395,9 +396,9 @@ asset output.js 2.45 KiB [emitted] [minimized] (name: main)
 asset 548.output.js 130 bytes [emitted] [minimized] (name: chunk-bar-baz2)
 asset 791.output.js 130 bytes [emitted] [minimized] (name: chunk-bar-baz0)
 asset 930.output.js 130 bytes [emitted] [minimized] (name: chunk-foo)
-chunk (runtime: main) output.js (main) 565 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 565 bytes (javascript) 5.5 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.5 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 405 bytes [built] [code generated]
     [no exports used]
@@ -423,5 +424,5 @@ chunk (runtime: main) 930.output.js (chunk-foo) 38 bytes [rendered]
     [exports: default]
     import() ./templates/foo ./example.js 1:0-62
     cjs require ./templates/foo ./example.js 6:11-37
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

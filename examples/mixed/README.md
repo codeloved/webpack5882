@@ -236,6 +236,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -317,7 +318,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -491,9 +492,9 @@ module.exports = function() {
 ```
 asset output.js 13.8 KiB [emitted] (name: main)
 asset 635.output.js 2.24 KiB [emitted]
-chunk (runtime: main) output.js (main) 1010 bytes (javascript) 5.8 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 1010 bytes (javascript) 5.77 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.8 KiB 9 modules
+  runtime modules 5.77 KiB 9 modules
   dependent modules 617 bytes [dependent] 3 modules
   ./example.js 396 bytes [built] [code generated]
     [used exports unknown]
@@ -505,7 +506,7 @@ chunk (runtime: main) 635.output.js 433 bytes [rendered]
     [no exports]
     [used exports unknown]
     amd require context ./example.js 7:0-14:1
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -513,9 +514,9 @@ webpack 5.78.0 compiled successfully
 ```
 asset output.js 2.49 KiB [emitted] [minimized] (name: main)
 asset 635.output.js 580 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 1010 bytes (javascript) 5.8 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 1010 bytes (javascript) 5.77 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.8 KiB 9 modules
+  runtime modules 5.77 KiB 9 modules
   dependent modules 617 bytes [dependent] 3 modules
   ./example.js 396 bytes [built] [code generated]
     [no exports used]
@@ -526,5 +527,5 @@ chunk (runtime: main) 635.output.js 433 bytes [rendered]
   ../require.context/templates/ sync ^\.\/.*\.js$ 193 bytes [built] [code generated]
     [no exports]
     amd require context ./example.js 7:0-14:1
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

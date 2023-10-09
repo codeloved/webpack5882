@@ -217,6 +217,7 @@ module.exports = {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -409,7 +410,7 @@ chunk (runtime: runtime~main) 3.[chunkhash].js 28 bytes [rendered]
   ./async2.js 28 bytes [built] [code generated]
     [used exports unknown]
     import() ./async2 ./example.js 3:0-18
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -435,8 +436,8 @@ chunk (runtime: runtime~main) main.[chunkhash].js (main) 55 bytes [initial] [ren
   ./example.js 55 bytes [built] [code generated]
     [no exports used]
     entry ./example main
-chunk (runtime: runtime~main) runtime~main.[chunkhash].js (runtime~main) 7.59 KiB [entry] [rendered]
+chunk (runtime: runtime~main) runtime~main.[chunkhash].js (runtime~main) 7.6 KiB [entry] [rendered]
   > ./example main
-  runtime modules 7.59 KiB 10 modules
-webpack 5.78.0 compiled successfully
+  runtime modules 7.6 KiB 10 modules
+webpack 5.88.2 compiled successfully
 ```

@@ -10,11 +10,11 @@ The interesting thing here is that putting all modules in a single scope won't w
 
 - Modules `lazy`, `c`, `d` and `cjs` need to be in a separate chunk
 - Module `shared` is accessed by two chunks (different scopes)
-- Module `cjs` is a CommonJS module
+- Module `cjs` is a CommonJs module
 
 ![](graph2.png)
 
-Webpack, therefore, uses an approach called **"Partial Scope Hoisting"** or "Module concatenation", which chooses the largest possible subsets of ES modules which can be scope hoisted and combines them with the default webpack primitives.
+Webpack, therefore, uses a approach called **"Partial Scope Hoisting"** or "Module concatenation", which chooses the largest possible subsets of ES modules which can be scope hoisted and combines them with the default webpack primitives.
 
 ![](graph3.png)
 
@@ -129,8 +129,8 @@ module.exports = {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "x": () => (/* binding */ x),
-  "y": () => (/* reexport */ y)
+  x: () => (/* binding */ x),
+  y: () => (/* reexport */ y)
 });
 
 ;// CONCATENATED MODULE: ./node_modules/shared2.js
@@ -243,6 +243,7 @@ var x = "x";
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -324,7 +325,7 @@ var x = "x";
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -441,17 +442,17 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "c": () => (/* reexport */ c),
-  "d": () => (/* reexport */ d_namespaceObject),
-  "x": () => (/* reexport */ shared.x),
-  "y": () => (/* reexport */ shared.y)
+  c: () => (/* reexport */ c),
+  d: () => (/* reexport */ d_namespaceObject),
+  x: () => (/* reexport */ shared.x),
+  y: () => (/* reexport */ shared.y)
 });
 
 // NAMESPACE OBJECT: ./node_modules/d.js
 var d_namespaceObject = {};
 __webpack_require__.r(d_namespaceObject);
 __webpack_require__.d(d_namespaceObject, {
-  "a": () => (a)
+  a: () => (a)
 });
 
 // EXTERNAL MODULE: ./node_modules/cjs.js
@@ -507,10 +508,10 @@ Minimized
 
 ```
 asset output.js 11.2 KiB [emitted] (name: main)
-asset 872.output.js 2.74 KiB [emitted]
-chunk (runtime: main) output.js (main) 367 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+asset 872.output.js 2.73 KiB [emitted]
+chunk (runtime: main) output.js (main) 367 bytes (javascript) 5.5 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.5 KiB 8 modules
   dependent modules 100 bytes [dependent] 1 module
   ./example.js + 2 modules 267 bytes [built] [code generated]
     [no exports]
@@ -522,7 +523,7 @@ chunk (runtime: main) 872.output.js 263 bytes [rendered]
   ./lazy.js + 2 modules 221 bytes [built] [code generated]
     [exports: c, d, x, y]
     import() ./lazy ./example.js + 2 modules ./example.js 4:0-16
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -530,9 +531,9 @@ webpack 5.78.0 compiled successfully
 ```
 asset output.js 2.11 KiB [emitted] [minimized] (name: main)
 asset 872.output.js 270 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 367 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 367 bytes (javascript) 5.5 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.5 KiB 8 modules
   dependent modules 100 bytes [dependent] 2 modules
   ./example.js + 2 modules 267 bytes [built] [code generated]
     [no exports]
@@ -544,5 +545,5 @@ chunk (runtime: main) 872.output.js 263 bytes [rendered]
   ./lazy.js + 2 modules 221 bytes [built] [code generated]
     [exports: c, d, x, y]
     import() ./lazy ./example.js + 2 modules ./example.js 4:0-16
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

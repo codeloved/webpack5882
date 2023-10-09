@@ -146,7 +146,7 @@ chunk (runtime: main) output.js (main) 696 bytes [entry] [rendered]
   ./example.js 33 bytes [built] [code generated]
     [used exports unknown]
     entry ./example.js main
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -159,5 +159,5 @@ chunk (runtime: main) output.js (main) 696 bytes [entry] [rendered]
   ./example.js 33 bytes [built] [code generated]
     [no exports used]
     entry ./example.js main
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

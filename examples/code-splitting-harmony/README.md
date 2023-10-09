@@ -228,6 +228,7 @@ module.exports = webpackAsyncContext;
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -309,7 +310,7 @@ module.exports = webpackAsyncContext;
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -409,9 +410,9 @@ chunk (runtime: main) 98.output.js 13 bytes [rendered]
     [used exports unknown]
     import() context element ./2 ./node_modules/c/ lazy ^\.\/.*$ namespace object ./2
     import() context element ./2.js ./node_modules/c/ lazy ^\.\/.*$ namespace object ./2.js
-chunk (runtime: main) output.js (main) 414 bytes (javascript) 6.91 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 414 bytes (javascript) 6.88 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 6.91 KiB 10 modules
+  runtime modules 6.88 KiB 10 modules
   dependent modules 171 bytes [dependent] 2 modules
   ./example.js 243 bytes [built] [code generated]
     [no exports]
@@ -429,7 +430,7 @@ chunk (runtime: main) 644.output.js 11 bytes [rendered]
   ./node_modules/b.js 11 bytes [built] [code generated]
     [used exports unknown]
     import() b ./example.js 3:0-11
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -446,9 +447,9 @@ chunk (runtime: main) 98.output.js 13 bytes [rendered]
     [used exports unknown]
     import() context element ./2 ./node_modules/c/ lazy ^\.\/.*$ namespace object ./2
     import() context element ./2.js ./node_modules/c/ lazy ^\.\/.*$ namespace object ./2.js
-chunk (runtime: main) output.js (main) 403 bytes (javascript) 6.65 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 403 bytes (javascript) 6.62 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 6.65 KiB 9 modules
+  runtime modules 6.62 KiB 9 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 243 bytes [built] [code generated]
     [no exports]
@@ -466,5 +467,5 @@ chunk (runtime: main) 644.output.js 11 bytes [rendered]
   ./node_modules/b.js 11 bytes [built] [code generated]
     [used exports unknown]
     import() b ./example.js 3:0-11
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

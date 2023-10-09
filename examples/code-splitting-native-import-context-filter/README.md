@@ -202,6 +202,7 @@ module.exports = webpackAsyncContext;
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -283,7 +284,7 @@ module.exports = webpackAsyncContext;
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -375,9 +376,9 @@ asset output.js 11.2 KiB [emitted] (name: main)
 asset 398.output.js 858 bytes [emitted]
 asset 544.output.js 858 bytes [emitted]
 asset 718.output.js 858 bytes [emitted]
-chunk (runtime: main) output.js (main) 597 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 597 bytes (javascript) 5.5 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.5 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 437 bytes [built] [code generated]
     [used exports unknown]
@@ -406,7 +407,7 @@ chunk (runtime: main) 718.output.js 38 bytes [rendered]
     [used exports unknown]
     import() context element ./foo ./templates/ lazy ^\.\/.*$ include: \.js$ exclude: \.noimport\.js$ namespace object ./foo
     import() context element ./foo.js ./templates/ lazy ^\.\/.*$ include: \.js$ exclude: \.noimport\.js$ namespace object ./foo.js
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -416,9 +417,9 @@ asset output.js 2.47 KiB [emitted] [minimized] (name: main)
 asset 398.output.js 130 bytes [emitted] [minimized]
 asset 544.output.js 130 bytes [emitted] [minimized]
 asset 718.output.js 130 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 597 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 597 bytes (javascript) 5.5 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.5 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 437 bytes [built] [code generated]
     [no exports used]
@@ -444,5 +445,5 @@ chunk (runtime: main) 718.output.js 38 bytes [rendered]
     [exports: default]
     import() context element ./foo ./templates/ lazy ^\.\/.*$ include: \.js$ exclude: \.noimport\.js$ namespace object ./foo
     import() context element ./foo.js ./templates/ lazy ^\.\/.*$ include: \.js$ exclude: \.noimport\.js$ namespace object ./foo.js
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

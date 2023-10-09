@@ -134,6 +134,7 @@ __webpack_require__.e(/*! require.ensure */ 929).then((function(require) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -204,7 +205,7 @@ __webpack_require__.e(/*! require.ensure */ 929).then((function(require) {
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -299,11 +300,11 @@ module.exports = "It works";
 ## Unoptimized
 
 ```
-asset output.js 9.68 KiB [emitted] (name: main)
+asset output.js 9.66 KiB [emitted] (name: main)
 asset 929.output.js 354 bytes [emitted]
-chunk (runtime: main) output.js (main) 375 bytes (javascript) 4.97 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 375 bytes (javascript) 4.94 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 4.97 KiB 6 modules
+  runtime modules 4.94 KiB 6 modules
   dependent modules 281 bytes [dependent] 1 module
   ./example.js 94 bytes [built] [code generated]
     [used exports unknown]
@@ -314,7 +315,7 @@ chunk (runtime: main) 929.output.js 28 bytes [rendered]
     [used exports unknown]
     cjs self exports reference ./file.js 1:0-14
     cjs require !!./file.js ../../node_modules/bundle-loader/index.js!./file.js 8:8-30
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -322,9 +323,9 @@ webpack 5.78.0 compiled successfully
 ```
 asset output.js 1.85 KiB [emitted] [minimized] (name: main)
 asset 929.output.js 88 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 375 bytes (javascript) 4.97 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 375 bytes (javascript) 4.94 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 4.97 KiB 6 modules
+  runtime modules 4.94 KiB 6 modules
   dependent modules 281 bytes [dependent] 1 module
   ./example.js 94 bytes [built] [code generated]
     [no exports used]
@@ -335,5 +336,5 @@ chunk (runtime: main) 929.output.js 28 bytes [rendered]
     [used exports unknown]
     cjs self exports reference ./file.js 1:0-14
     cjs require !!./file.js ../../node_modules/bundle-loader/index.js!./file.js 8:8-30
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

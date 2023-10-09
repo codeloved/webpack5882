@@ -81,7 +81,7 @@ const Button = () => {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Checkbox": () => (/* binding */ Checkbox)
+/* harmony export */   Checkbox: () => (/* binding */ Checkbox)
 /* harmony export */ });
 const Checkbox = () => {
   return /*#__PURE__*/React.createElement("input", {
@@ -204,9 +204,9 @@ const Login = () => {
 asset output.js 11 KiB [emitted] (name: main)
 asset pages_Login_js.output.js 2.82 KiB [emitted]
 asset pages_Dashboard_js.output.js 2.78 KiB [emitted]
-chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.51 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.51 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 48 bytes [built] [code generated]
     [no exports used]
@@ -227,7 +227,7 @@ chunk (runtime: main) pages_Login_js.output.js 500 bytes [rendered]
     [exports: default]
     import() context element ./Login ./pages/ lazy ^\.\/.*$ namespace object ./Login
     import() context element ./Login.js ./pages/ lazy ^\.\/.*$ namespace object ./Login.js
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -236,9 +236,9 @@ webpack 5.78.0 compiled successfully
 asset output.js 2.49 KiB [emitted] [minimized] (name: main)
 asset pages_Dashboard_js.output.js 450 bytes [emitted] [minimized]
 asset pages_Login_js.output.js 444 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.51 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.54 KiB 8 modules
+  runtime modules 5.51 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 48 bytes [built] [code generated]
     [no exports used]
@@ -259,5 +259,5 @@ chunk (runtime: main) pages_Login_js.output.js 500 bytes [rendered]
     [exports: default]
     import() context element ./Login ./pages/ lazy ^\.\/.*$ namespace object ./Login
     import() context element ./Login.js ./pages/ lazy ^\.\/.*$ namespace object ./Login.js
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

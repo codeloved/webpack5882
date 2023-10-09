@@ -92,12 +92,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "decrement": () => (/* reexport */ decrement),
-  "increment": () => (/* reexport */ increment),
-  "print": () => (/* reexport */ print),
-  "reset": () => (/* reexport */ counter_reset),
-  "resetCounter": () => (/* reexport */ counter_reset),
-  "value": () => (/* reexport */ value)
+  decrement: () => (/* reexport */ decrement),
+  increment: () => (/* reexport */ increment),
+  print: () => (/* reexport */ print),
+  reset: () => (/* reexport */ counter_reset),
+  resetCounter: () => (/* reexport */ counter_reset),
+  value: () => (/* reexport */ value)
 });
 
 ;// CONCATENATED MODULE: ./counter.js
@@ -141,7 +141,7 @@ var e={d:(n,t)=>{for(var o in t)e.o(t,o)&&!e.o(n,o)&&Object.defineProperty(n,o,{
 ## Unoptimized
 
 ```
-asset output.js 3.61 KiB [emitted] [javascript module] (name: main)
+asset output.js 3.59 KiB [emitted] [javascript module] (name: main)
 chunk (runtime: main) output.js (main) 302 bytes (javascript) 670 bytes (runtime) [entry] [rendered]
   > ./example.js main
   runtime modules 670 bytes 3 modules
@@ -150,7 +150,7 @@ chunk (runtime: main) output.js (main) 302 bytes (javascript) 670 bytes (runtime
     [used exports unknown]
     entry ./example.js main
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -165,5 +165,5 @@ chunk (runtime: main) output.js (main) 302 bytes (javascript) 396 bytes (runtime
     [all exports used]
     entry ./example.js main
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

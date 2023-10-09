@@ -133,8 +133,8 @@ When compiling for other targets like node.js, electron or WebWorkers, it may be
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AlternativeCreateUserAction": () => (/* binding */ AlternativeCreateUserAction),
-/* harmony export */   "CreateUserAction": () => (/* binding */ CreateUserAction)
+/* harmony export */   AlternativeCreateUserAction: () => (/* binding */ AlternativeCreateUserAction),
+/* harmony export */   CreateUserAction: () => (/* binding */ CreateUserAction)
 /* harmony export */ });
 // import() doesn't care about whether a module is an async module or not
 const UserApi = __webpack_require__.e(/*! import() */ 497).then(__webpack_require__.bind(__webpack_require__, /*! ./UserApi.js */ 2));
@@ -207,7 +207,7 @@ const AlternativeCreateUserAction = async name => {
 /******/ 		var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
 /******/ 		var webpackError = typeof Symbol === "function" ? Symbol("webpack error") : "__webpack_error__";
 /******/ 		var resolveQueue = (queue) => {
-/******/ 			if(queue && !queue.d) {
+/******/ 			if(queue && queue.d < 1) {
 /******/ 				queue.d = 1;
 /******/ 				queue.forEach((fn) => (fn.r--));
 /******/ 				queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
@@ -238,7 +238,7 @@ const AlternativeCreateUserAction = async name => {
 /******/ 		}));
 /******/ 		__webpack_require__.a = (module, body, hasAwait) => {
 /******/ 			var queue;
-/******/ 			hasAwait && ((queue = []).d = 1);
+/******/ 			hasAwait && ((queue = []).d = -1);
 /******/ 			var depQueues = new Set();
 /******/ 			var exports = module.exports;
 /******/ 			var currentDeps;
@@ -266,7 +266,7 @@ const AlternativeCreateUserAction = async name => {
 /******/ 				});
 /******/ 				return fn.r ? promise : getResult();
 /******/ 			}, (err) => ((err ? reject(promise[webpackError] = err) : outerResolve(exports)), resolveQueue(queue)));
-/******/ 			queue && (queue.d = 0);
+/******/ 			queue && queue.d < 0 && (queue.d = 0);
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -333,6 +333,7 @@ const AlternativeCreateUserAction = async name => {
 /******/ 				if (__webpack_require__.nc) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
+/******/ 		
 /******/ 		
 /******/ 				script.src = url;
 /******/ 			}
@@ -415,7 +416,7 @@ const AlternativeCreateUserAction = async name => {
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -509,7 +510,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createUser": () => (/* binding */ createUser)
+/* harmony export */   createUser: () => (/* binding */ createUser)
 /* harmony export */ });
 /* harmony import */ var _db_connection_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./db-connection.js */ 3);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_db_connection_js__WEBPACK_IMPORTED_MODULE_0__]);
@@ -540,8 +541,8 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "close": () => (/* binding */ close),
-/* harmony export */   "dbCall": () => (/* binding */ dbCall)
+/* harmony export */   close: () => (/* binding */ close),
+/* harmony export */   dbCall: () => (/* binding */ dbCall)
 /* harmony export */ });
 const connectToDB = async url => {
 	await new Promise(r => setTimeout(r, 1000));
@@ -579,10 +580,10 @@ __webpack_async_result__();
 
 ```
 asset output.js 15 KiB [emitted] (name: main)
-asset 497.output.js 2.97 KiB [emitted]
-chunk (runtime: main) output.js (main) 1.19 KiB (javascript) 7.57 KiB (runtime) [entry] [rendered]
+asset 497.output.js 2.96 KiB [emitted]
+chunk (runtime: main) output.js (main) 1.19 KiB (javascript) 7.56 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 7.57 KiB 9 modules
+  runtime modules 7.56 KiB 9 modules
   dependent modules 1.09 KiB [dependent] 1 module
   ./example.js 103 bytes [built] [code generated]
     [no exports]
@@ -597,17 +598,17 @@ chunk (runtime: main) 497.output.js 617 bytes [rendered]
     [used exports unknown]
     import() ./UserApi.js ./Actions.js 2:16-38
     import() ./UserApi.js ./Actions.js 22:30-52
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
 
 ```
-asset output.js 2.94 KiB [emitted] [minimized] (name: main)
+asset output.js 2.95 KiB [emitted] [minimized] (name: main)
 asset 497.output.js 531 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 1.19 KiB (javascript) 7.57 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 1.19 KiB (javascript) 7.56 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 7.57 KiB 9 modules
+  runtime modules 7.56 KiB 9 modules
   ./example.js + 1 modules 1.19 KiB [built] [code generated]
     [no exports]
     [no exports used]
@@ -620,5 +621,5 @@ chunk (runtime: main) 497.output.js 617 bytes [rendered]
     [exports: createUser]
     import() ./UserApi.js ./example.js + 1 modules ./Actions.js 2:16-38
     import() ./UserApi.js ./example.js + 1 modules ./Actions.js 22:30-52
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

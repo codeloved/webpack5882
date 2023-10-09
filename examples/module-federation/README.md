@@ -557,6 +557,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -680,9 +681,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => {
-/******/ 				typeof console !== "undefined" && console.warn ? console.warn(msg) : (() => {
-/******/ 		
-/******/ 				})()
+/******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 			};
 /******/ 			var uniqueName = "module-federation-aaa";
 /******/ 			var register = (name, version, factory, eager) => {
@@ -765,7 +764,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		};
 /******/ 		var getSingletonVersion = (scope, scopeName, key, requiredVersion) => {
 /******/ 			var version = findSingletonVersionKey(scope, key);
-/******/ 			if (!satisfy(requiredVersion, version)) typeof console !== "undefined" && console.warn && console.warn(getInvalidSingletonVersionMessage(scope, key, version, requiredVersion));
+/******/ 			if (!satisfy(requiredVersion, version)) warn(getInvalidSingletonVersionMessage(scope, key, version, requiredVersion));
 /******/ 			return get(scope[key][version]);
 /******/ 		};
 /******/ 		var getStrictSingletonVersion = (scope, scopeName, key, requiredVersion) => {
@@ -794,9 +793,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			throw new Error(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
 /******/ 		};
 /******/ 		var warn = (msg) => {
-/******/ 			typeof console !== "undefined" && console.warn ? console.warn(msg) : (() => {
-/******/ 		
-/******/ 			})()
+/******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
 /******/ 		var warnInvalidVersion = (scope, scopeName, key, requiredVersion) => {
 /******/ 			warn(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
@@ -1168,6 +1165,7 @@ __webpack_require__.d(exports, {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -1218,9 +1216,7 @@ __webpack_require__.d(exports, {
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => {
-/******/ 				typeof console !== "undefined" && console.warn ? console.warn(msg) : (() => {
-/******/ 		
-/******/ 				})()
+/******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 			};
 /******/ 			var uniqueName = "module-federation-bbb";
 /******/ 			var register = (name, version, factory, eager) => {
@@ -1242,8 +1238,8 @@ __webpack_require__.d(exports, {
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					register("date-fns", "2.29.3", () => (__webpack_require__.e("vendors-node_modules_date-fns_esm_index_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/date-fns/esm/index.js */ 6))))));
-/******/ 					register("react", "18.2.0", () => (__webpack_require__.e("node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/react/index.js */ 319))))));
+/******/ 					register("date-fns", "2.30.0", () => (__webpack_require__.e("vendors-node_modules_date-fns_esm_index_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/date-fns/esm/index.js */ 6))))));
+/******/ 					register("react", "18.2.0", () => (__webpack_require__.e("node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/react/index.js */ 335))))));
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -1331,9 +1327,7 @@ __webpack_require__.d(exports, {
 /******/ 			throw new Error(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
 /******/ 		};
 /******/ 		var warn = (msg) => {
-/******/ 			typeof console !== "undefined" && console.warn ? console.warn(msg) : (() => {
-/******/ 		
-/******/ 			})()
+/******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
 /******/ 		var warnInvalidVersion = (scope, scopeName, key, requiredVersion) => {
 /******/ 			warn(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
@@ -1397,7 +1391,7 @@ __webpack_require__.d(exports, {
 /******/ 		});
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
-/******/ 			4: () => (loadSingletonVersionCheckFallback("default", "react", [1,18,2,0], () => (__webpack_require__.e("node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ 319))))))),
+/******/ 			4: () => (loadSingletonVersionCheckFallback("default", "react", [1,18,2,0], () => (__webpack_require__.e("node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ 335))))))),
 /******/ 			5: () => (loadStrictVersionCheckFallback("default", "date-fns", [1,2,15,0], () => (__webpack_require__.e("vendors-node_modules_date-fns_esm_index_js").then(() => (() => (__webpack_require__(/*! date-fns */ 6)))))))
 /******/ 		};
 /******/ 		// no consumes in initial chunks
@@ -1481,7 +1475,7 @@ __webpack_require__.d(exports, {
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -1723,6 +1717,7 @@ __webpack_require__.d(exports, {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -1773,9 +1768,7 @@ __webpack_require__.d(exports, {
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => {
-/******/ 				typeof console !== "undefined" && console.warn ? console.warn(msg) : (() => {
-/******/ 		
-/******/ 				})()
+/******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 			};
 /******/ 			var uniqueName = "module-federation-ccc";
 /******/ 			var register = (name, version, factory, eager) => {
@@ -1797,8 +1790,8 @@ __webpack_require__.d(exports, {
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					register("date-fns", "2.29.3", () => (__webpack_require__.e("vendors-node_modules_date-fns_esm_index_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/date-fns/esm/index.js */ 8))))));
-/******/ 					register("lodash/random", "4.17.21", () => (__webpack_require__.e("vendors-node_modules_lodash_random_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/lodash/random.js */ 321))))));
+/******/ 					register("date-fns", "2.30.0", () => (__webpack_require__.e("vendors-node_modules_date-fns_esm_index_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/date-fns/esm/index.js */ 8))))));
+/******/ 					register("lodash/random", "4.17.21", () => (__webpack_require__.e("vendors-node_modules_lodash_random_js").then(() => (() => (__webpack_require__(/*! ../../node_modules/lodash/random.js */ 337))))));
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -1886,9 +1879,7 @@ __webpack_require__.d(exports, {
 /******/ 			throw new Error(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
 /******/ 		};
 /******/ 		var warn = (msg) => {
-/******/ 			typeof console !== "undefined" && console.warn ? console.warn(msg) : (() => {
-/******/ 		
-/******/ 			})()
+/******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
 /******/ 		var warnInvalidVersion = (scope, scopeName, key, requiredVersion) => {
 /******/ 			warn(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
@@ -1954,7 +1945,7 @@ __webpack_require__.d(exports, {
 /******/ 		var moduleToHandlerMapping = {
 /******/ 			4: () => (loadSingletonVersionCheck("default", "react", [1,18,2,0])),
 /******/ 			5: () => (loadStrictVersionCheckFallback("default", "date-fns", [1,2,15,0], () => (__webpack_require__.e("vendors-node_modules_date-fns_esm_index_js").then(() => (() => (__webpack_require__(/*! date-fns */ 8))))))),
-/******/ 			7: () => (loadStrictVersionCheckFallback("default", "lodash/random", [1,4,17,19], () => (__webpack_require__.e("vendors-node_modules_lodash_random_js").then(() => (() => (__webpack_require__(/*! lodash/random */ 321)))))))
+/******/ 			7: () => (loadStrictVersionCheckFallback("default", "lodash/random", [1,4,17,19], () => (__webpack_require__.e("vendors-node_modules_lodash_random_js").then(() => (() => (__webpack_require__(/*! lodash/random */ 337)))))))
 /******/ 		};
 /******/ 		// no consumes in initial chunks
 /******/ 		var chunkMapping = {
@@ -2111,7 +2102,7 @@ __webpack_require__.d(exports, {
 ```
 app:
   asset vendors-node_modules_date-fns_esm_locale_de_index_js-node_modules_react-dom_index_js.js 171 KiB [emitted] (id hint: vendors)
-  asset app.js 30.8 KiB [emitted] (name: app)
+  asset app.js 30.9 KiB [emitted] (name: app)
   asset node_modules_react_index_js.js 16.6 KiB [emitted]
   asset src_bootstrap_js.js 4.98 KiB [emitted]
   chunk (runtime: app) app.js (app) 672 bytes (javascript) 42 bytes (share-init) 19.6 KiB (runtime) [entry] [rendered]
@@ -2131,19 +2122,19 @@ app:
     > ./bootstrap ./src/index.js 10:0-21
     dependent modules 1.18 KiB (javascript) 42 bytes (consume-shared) 12 bytes (remote) 12 bytes (share-init) [dependent] 4 modules
     ./src/bootstrap.js 381 bytes [built] [code generated]
-  chunk (runtime: app) vendors-node_modules_date-fns_esm_locale_de_index_js-node_modules_react-dom_index_js.js (id hint: vendors) 151 KiB [rendered] split chunk (cache group: defaultVendors)
+  chunk (runtime: app) vendors-node_modules_date-fns_esm_locale_de_index_js-node_modules_react-dom_index_js.js (id hint: vendors) 150 KiB [rendered] split chunk (cache group: defaultVendors)
     > ./bootstrap ./src/index.js 10:0-21
     dependent modules 148 KiB [dependent] 12 modules
-    cacheable modules 2.3 KiB
-      ../../node_modules/date-fns/esm/locale/de/index.js 995 bytes [built] [code generated]
+    cacheable modules 2.29 KiB
+      ../../node_modules/date-fns/esm/locale/de/index.js 985 bytes [built] [code generated]
       ../../node_modules/react-dom/index.js 1.33 KiB [built] [code generated]
   chunk (runtime: app) 6 bytes (remote) 6 bytes (share-init)
     > mfe-c/Component2 ./src/App.js 7:49-75
     remote mfe-c/Component2 6 bytes (remote) 6 bytes (share-init) [built] [code generated]
-  app (webpack 5.78.0) compiled successfully
+  app (webpack 5.88.2) compiled successfully
 
 mfe-b:
-  asset vendors-node_modules_date-fns_esm_index_js.js 1.12 MiB [emitted] (id hint: vendors)
+  asset vendors-node_modules_date-fns_esm_index_js.js 1.1 MiB [emitted] (id hint: vendors)
   asset mfeBBB.js 25.5 KiB [emitted] (name: mfeBBB)
   asset node_modules_react_index_js.js 16.7 KiB [emitted]
   asset src-b_Component_js.js 2.25 KiB [emitted]
@@ -2152,7 +2143,7 @@ mfe-b:
     runtime modules 17 KiB 11 modules
     built modules 42 bytes (javascript) 84 bytes (share-init) [built]
       container entry 42 bytes [built] [code generated]
-      provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js 42 bytes [built] [code generated]
+      provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fn...(truncated) 42 bytes [built] [code generated]
       provide shared module (default) react@18.2.0 = ../../node_modules/react/index.js 42 bytes [built] [code generated]
   chunk (runtime: mfeBBB) node_modules_react_index_js.js 6.94 KiB [rendered]
     > provide shared module (default) react@18.2.0 = ../../node_modules/react/index.js
@@ -2163,16 +2154,16 @@ mfe-b:
     > ./src-b/Component container entry ./Component
     dependent modules 84 bytes [dependent] 2 modules
     ./src-b/Component.js 752 bytes [built] [code generated]
-  chunk (runtime: mfeBBB) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 679 KiB [rendered] reused as split chunk (cache group: defaultVendors)
-    > provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js
+  chunk (runtime: mfeBBB) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 595 KiB [rendered] reused as split chunk (cache group: defaultVendors)
+    > provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fns/esm/index.js
     > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
-    dependent modules 663 KiB [dependent] 312 modules
+    dependent modules 579 KiB [dependent] 328 modules
     ../../node_modules/date-fns/esm/index.js 16.2 KiB [built] [code generated]
-  mfe-b (webpack 5.78.0) compiled successfully
+  mfe-b (webpack 5.88.2) compiled successfully
 
 mfe-c:
-  assets by chunk 1.15 MiB (id hint: vendors)
-    asset vendors-node_modules_date-fns_esm_index_js.js 1.12 MiB [emitted] (id hint: vendors)
+  assets by chunk 1.12 MiB (id hint: vendors)
+    asset vendors-node_modules_date-fns_esm_index_js.js 1.1 MiB [emitted] (id hint: vendors)
     asset vendors-node_modules_lodash_random_js.js 24.8 KiB [emitted] (id hint: vendors)
   asset mfeCCC.js 26.5 KiB [emitted] (name: mfeCCC)
   asset src-c_LazyComponent_js.js 2.05 KiB [emitted]
@@ -2182,8 +2173,8 @@ mfe-c:
     runtime modules 17.5 KiB 12 modules
     built modules 42 bytes (javascript) 84 bytes (share-init) [built]
       container entry 42 bytes [built] [code generated]
-      provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js 42 bytes [built] [code generated]
-      provide shared module (default) lodash/random@4.17.21 = ../../node_modules/lodash/random.js 42 bytes [built] [code generated]
+      provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fn...(truncated) 42 bytes [built] [code generated]
+      provide shared module (default) lodash/random@4.17.21 = ../../node_modules/lo...(truncated) 42 bytes [built] [code generated]
   chunk (runtime: mfeCCC) src-c_Component_js.js 467 bytes (javascript) 42 bytes (consume-shared) [rendered]
     > ./src-c/Component container entry ./Component
     dependent modules 42 bytes [dependent] 1 module
@@ -2192,10 +2183,10 @@ mfe-c:
     > ./src-c/LazyComponent container entry ./Component2
     dependent modules 42 bytes [dependent] 1 module
     ./src-c/LazyComponent.js 504 bytes [built] [code generated]
-  chunk (runtime: mfeCCC) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 679 KiB [rendered] reused as split chunk (cache group: defaultVendors)
-    > provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js
+  chunk (runtime: mfeCCC) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 595 KiB [rendered] reused as split chunk (cache group: defaultVendors)
+    > provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fns/esm/index.js
     > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
-    dependent modules 663 KiB [dependent] 312 modules
+    dependent modules 579 KiB [dependent] 328 modules
     ../../node_modules/date-fns/esm/index.js 16.2 KiB [built] [code generated]
   chunk (runtime: mfeCCC) vendors-node_modules_lodash_random_js.js (id hint: vendors) 16 KiB [rendered] reused as split chunk (cache group: defaultVendors)
     > provide shared module (default) lodash/random@4.17.21 = ../../node_modules/lodash/random.js
@@ -2206,7 +2197,7 @@ mfe-c:
     > ./src-c/Component container entry ./Component
     > ./src-c/LazyComponent container entry ./Component2
     consume shared module (default) react@^18.2.0 (singleton) 42 bytes [built] [code generated]
-  mfe-c (webpack 5.78.0) compiled successfully
+  mfe-c (webpack 5.88.2) compiled successfully
 ```
 
 ## Production mode
@@ -2214,7 +2205,7 @@ mfe-c:
 ```
 app:
   asset vendors-node_modules_date-fns_esm_locale_de_index_js-node_modules_react-dom_index_js.js 139 KiB [emitted] [minimized] (id hint: vendors) 1 related asset
-  asset app.js 7.42 KiB [emitted] [minimized] (name: app)
+  asset app.js 7.43 KiB [emitted] [minimized] (name: app)
   asset node_modules_react_index_js.js 6.5 KiB [emitted] [minimized] 1 related asset
   asset src_bootstrap_js.js 1.04 KiB [emitted] [minimized]
   chunk (runtime: app) app.js (app) 672 bytes (javascript) 42 bytes (share-init) 19.5 KiB (runtime) [entry] [rendered]
@@ -2234,7 +2225,7 @@ app:
     > ./bootstrap ./src/index.js 10:0-21
     dependent modules 42 bytes (consume-shared) 12 bytes (remote) 12 bytes (share-init) [dependent] 3 modules
     ./src/bootstrap.js + 1 modules 1.56 KiB [built] [code generated]
-  chunk (runtime: app) vendors-node_modules_date-fns_esm_locale_de_index_js-node_modules_react-dom_index_js.js (id hint: vendors) 151 KiB [rendered] split chunk (cache group: defaultVendors)
+  chunk (runtime: app) vendors-node_modules_date-fns_esm_locale_de_index_js-node_modules_react-dom_index_js.js (id hint: vendors) 150 KiB [rendered] split chunk (cache group: defaultVendors)
     > ./bootstrap ./src/index.js 10:0-21
     dependent modules 133 KiB [dependent] 3 modules
     cacheable modules 17.5 KiB
@@ -2243,19 +2234,19 @@ app:
   chunk (runtime: app) 6 bytes (remote) 6 bytes (share-init)
     > mfe-c/Component2 ./src/App.js 7:49-75
     remote mfe-c/Component2 6 bytes (remote) 6 bytes (share-init) [built] [code generated]
-  app (webpack 5.78.0) compiled successfully
+  app (webpack 5.88.2) compiled successfully
 
 mfe-b:
-  asset vendors-node_modules_date-fns_esm_index_js.js 154 KiB [emitted] [minimized] (id hint: vendors)
+  asset vendors-node_modules_date-fns_esm_index_js.js 101 KiB [emitted] [minimized] (id hint: vendors)
   asset node_modules_react_index_js.js 6.5 KiB [emitted] [minimized] 1 related asset
-  asset mfeBBB.js 5.82 KiB [emitted] [minimized] (name: mfeBBB)
+  asset mfeBBB.js 5.79 KiB [emitted] [minimized] (name: mfeBBB)
   asset src-b_Component_js.js 489 bytes [emitted] [minimized]
   chunk (runtime: mfeBBB) mfeBBB.js (mfeBBB) 42 bytes (javascript) 84 bytes (share-init) 16.9 KiB (runtime) [entry] [rendered]
     > mfeBBB
     runtime modules 16.9 KiB 11 modules
     built modules 42 bytes (javascript) 84 bytes (share-init) [built]
       container entry 42 bytes [built] [code generated]
-      provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js 42 bytes [built] [code generated]
+      provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fn...(truncated) 42 bytes [built] [code generated]
       provide shared module (default) react@18.2.0 = ../../node_modules/react/index.js 42 bytes [built] [code generated]
   chunk (runtime: mfeBBB) node_modules_react_index_js.js 6.94 KiB [rendered]
     > provide shared module (default) react@18.2.0 = ../../node_modules/react/index.js
@@ -2266,15 +2257,15 @@ mfe-b:
     > ./src-b/Component container entry ./Component
     dependent modules 84 bytes [dependent] 2 modules
     ./src-b/Component.js 752 bytes [built] [code generated]
-  chunk (runtime: mfeBBB) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 679 KiB [rendered] reused as split chunk (cache group: defaultVendors)
-    > provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js
+  chunk (runtime: mfeBBB) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 595 KiB [rendered] reused as split chunk (cache group: defaultVendors)
+    > provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fns/esm/index.js
     > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
-    ../../node_modules/date-fns/esm/index.js + 312 modules 679 KiB [built] [code generated]
-  mfe-b (webpack 5.78.0) compiled successfully
+    ../../node_modules/date-fns/esm/index.js + 328 modules 595 KiB [built] [code generated]
+  mfe-b (webpack 5.88.2) compiled successfully
 
 mfe-c:
-  asset vendors-node_modules_date-fns_esm_index_js.js 154 KiB [emitted] [minimized] (id hint: vendors)
-  asset mfeCCC.js 6.47 KiB [emitted] [minimized] (name: mfeCCC)
+  asset vendors-node_modules_date-fns_esm_index_js.js 101 KiB [emitted] [minimized] (id hint: vendors)
+  asset mfeCCC.js 6.44 KiB [emitted] [minimized] (name: mfeCCC)
   asset node_modules_lodash_random_js.js 3.13 KiB [emitted] [minimized]
   asset src-c_LazyComponent_js.js 532 bytes [emitted] [minimized]
   asset src-c_Component_js.js 488 bytes [emitted] [minimized]
@@ -2283,8 +2274,8 @@ mfe-c:
     runtime modules 17.3 KiB 12 modules
     built modules 42 bytes (javascript) 84 bytes (share-init) [built]
       container entry 42 bytes [built] [code generated]
-      provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js 42 bytes [built] [code generated]
-      provide shared module (default) lodash/random@4.17.21 = ../../node_modules/lodash/random.js 42 bytes [built] [code generated]
+      provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fn...(truncated) 42 bytes [built] [code generated]
+      provide shared module (default) lodash/random@4.17.21 = ../../node_modules/lo...(truncated) 42 bytes [built] [code generated]
   chunk (runtime: mfeCCC) node_modules_lodash_random_js.js 16 KiB [rendered]
     > provide shared module (default) lodash/random@4.17.21 = ../../node_modules/lodash/random.js
     > consume shared module (default) lodash/random@^4.17.19 (strict) (fallback: ../../node_modules/lodash/random.js)
@@ -2298,13 +2289,13 @@ mfe-c:
     > ./src-c/LazyComponent container entry ./Component2
     dependent modules 42 bytes [dependent] 1 module
     ./src-c/LazyComponent.js 504 bytes [built] [code generated]
-  chunk (runtime: mfeCCC) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 679 KiB [rendered] reused as split chunk (cache group: defaultVendors)
-    > provide shared module (default) date-fns@2.29.3 = ../../node_modules/date-fns/esm/index.js
+  chunk (runtime: mfeCCC) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 595 KiB [rendered] reused as split chunk (cache group: defaultVendors)
+    > provide shared module (default) date-fns@2.30.0 = ../../node_modules/date-fns/esm/index.js
     > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
-    ../../node_modules/date-fns/esm/index.js + 312 modules 679 KiB [built] [code generated]
+    ../../node_modules/date-fns/esm/index.js + 328 modules 595 KiB [built] [code generated]
   chunk (runtime: mfeCCC) 42 bytes split chunk (cache group: default)
     > ./src-c/Component container entry ./Component
     > ./src-c/LazyComponent container entry ./Component2
     consume shared module (default) react@^18.2.0 (singleton) 42 bytes [built] [code generated]
-  mfe-c (webpack 5.78.0) compiled successfully
+  mfe-c (webpack 5.88.2) compiled successfully
 ```

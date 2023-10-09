@@ -205,7 +205,7 @@ chunk (runtime: beta) MyLibrary.beta.js (beta) 24 bytes [entry] [rendered]
     cjs self exports reference ./beta.js 1:0-14
     entry ./beta beta
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -227,5 +227,5 @@ chunk (runtime: beta) MyLibrary.beta.js (beta) 24 bytes [entry] [rendered]
     cjs self exports reference ./beta.js 1:0-14
     entry ./beta beta
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

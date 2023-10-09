@@ -68,7 +68,7 @@ module.exports = __webpack_require__;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "square": () => (/* binding */ square)
+/* harmony export */   square: () => (/* binding */ square)
 /* harmony export */ });
 function square(n) {
 	return n * n;
@@ -173,7 +173,7 @@ chunk (runtime: main) vendor.js (main) 57 bytes (javascript) 670 bytes (runtime)
     [used exports unknown]
     dll entry
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -187,5 +187,5 @@ chunk (runtime: main) vendor.js (main) 57 bytes (javascript) 670 bytes (runtime)
   dll main 12 bytes [built] [code generated]
     dll entry
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

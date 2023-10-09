@@ -97,9 +97,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "a": () => (/* reexport */ a),
-  "b": () => (/* reexport */ b),
-  "c": () => (/* reexport */ cjs.c)
+  a: () => (/* reexport */ a),
+  b: () => (/* reexport */ b),
+  c: () => (/* reexport */ cjs.c)
 });
 
 ;// CONCATENATED MODULE: ./b.js
@@ -225,7 +225,7 @@ exports.c = "c";
 ## Unoptimized
 
 ```
-asset dll.js 4.71 KiB [emitted] (name: dll)
+asset dll.js 4.7 KiB [emitted] (name: dll)
 chunk (runtime: dll) dll.js (dll) 211 bytes (javascript) 670 bytes (runtime) [entry] [rendered]
   > dll
   runtime modules 670 bytes 3 modules
@@ -234,7 +234,7 @@ chunk (runtime: dll) dll.js (dll) 211 bytes (javascript) 670 bytes (runtime) [en
     [used exports unknown]
     dll entry
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -248,5 +248,5 @@ chunk (runtime: dll) dll.js (dll) 211 bytes (javascript) 670 bytes (runtime) [en
   dll dll 12 bytes [built] [code generated]
     dll entry
     used as library export
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

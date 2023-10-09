@@ -105,6 +105,7 @@ getTemplate("b", function(b) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 		
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -175,7 +176,7 @@ getTemplate("b", function(b) {
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -341,11 +342,11 @@ module.exports = function() {
 ## Unoptimized
 
 ```
-asset output.js 8.95 KiB [emitted] (name: main)
+asset output.js 8.93 KiB [emitted] (name: main)
 asset 577.output.js 2.23 KiB [emitted]
-chunk (runtime: main) output.js (main) 266 bytes (javascript) 4.97 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 266 bytes (javascript) 4.94 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 4.97 KiB 6 modules
+  runtime modules 4.94 KiB 6 modules
   ./example.js 266 bytes [built] [code generated]
     [used exports unknown]
     entry ./example.js main
@@ -356,7 +357,7 @@ chunk (runtime: main) 577.output.js 457 bytes [rendered]
     [no exports]
     [used exports unknown]
     cjs require context ./example.js 3:11-64
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -364,9 +365,9 @@ webpack 5.78.0 compiled successfully
 ```
 asset output.js 1.79 KiB [emitted] [minimized] (name: main)
 asset 577.output.js 609 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 266 bytes (javascript) 4.97 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 266 bytes (javascript) 4.94 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 4.97 KiB 6 modules
+  runtime modules 4.94 KiB 6 modules
   ./example.js 266 bytes [built] [code generated]
     [no exports used]
     entry ./example.js main
@@ -376,5 +377,5 @@ chunk (runtime: main) 577.output.js 457 bytes [rendered]
   ../require.context/templates/ sync ^\.\/.*$ 217 bytes [built] [code generated]
     [no exports]
     cjs require context ./example.js 3:11-64
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

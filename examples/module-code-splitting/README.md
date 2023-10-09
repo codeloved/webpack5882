@@ -134,7 +134,7 @@ export function reset() {
 /******/ 	
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 	// [resolve, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
 /******/ 		0: 0
 /******/ 	};
@@ -177,7 +177,7 @@ export function reset() {
 /******/ 						});
 /******/ 						var promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
 /******/ 						promises.push(installedChunkData[1] = promise);
-/******/ 					} else installedChunks[chunkId] = 0;
+/******/ 					}
 /******/ 				}
 /******/ 			}
 /******/ 	};
@@ -233,11 +233,11 @@ var e,o,t={},r={};function n(e){var o=r[e];if(void 0!==o)return o.exports;var i=
 ## Unoptimized
 
 ```
-asset output.js 6.34 KiB [emitted] [javascript module] (name: main)
-asset 1.output.js 1.35 KiB [emitted] [javascript module]
-chunk (runtime: main) output.js (main) 420 bytes (javascript) 2.87 KiB (runtime) [entry] [rendered]
+asset output.js 6.3 KiB [emitted] [javascript module] (name: main)
+asset 1.output.js 1.34 KiB [emitted] [javascript module]
+chunk (runtime: main) output.js (main) 420 bytes (javascript) 2.83 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 2.87 KiB 6 modules
+  runtime modules 2.83 KiB 6 modules
   ./example.js + 1 modules 420 bytes [built] [code generated]
     [no exports]
     [no exports used]
@@ -250,7 +250,7 @@ chunk (runtime: main) 1.output.js 146 bytes [rendered]
     [exports: decrement, increment, reset, value]
     import() ./counter ./example.js + 1 modules ./example.js 4:23-42
     import() ./counter ./example.js + 1 modules ./methods.js 2:8-27
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
 
 ## Production mode
@@ -258,9 +258,9 @@ webpack 5.78.0 compiled successfully
 ```
 asset output.js 1.15 KiB [emitted] [javascript module] [minimized] (name: main)
 asset 946.output.js 213 bytes [emitted] [javascript module] [minimized]
-chunk (runtime: main) output.js (main) 420 bytes (javascript) 2.87 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 420 bytes (javascript) 2.83 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 2.87 KiB 6 modules
+  runtime modules 2.83 KiB 6 modules
   ./example.js + 1 modules 420 bytes [built] [code generated]
     [no exports]
     [no exports used]
@@ -273,5 +273,5 @@ chunk (runtime: main) 946.output.js 146 bytes [rendered]
     [exports: decrement, increment, reset, value]
     import() ./counter ./example.js + 1 modules ./example.js 4:23-42
     import() ./counter ./example.js + 1 modules ./methods.js 2:8-27
-webpack 5.78.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```

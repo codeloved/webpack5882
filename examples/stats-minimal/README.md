@@ -14,7 +14,7 @@ console.log("Hello World!");
 const path = require("path");
 
 module.exports = {
-	output: {
+    output: {
 		path: path.join(__dirname, "dist"),
 		filename: "output.js"
 	},
@@ -45,5 +45,5 @@ console.log("Hello World!");
 ```
 1 asset
 1 module
-webpack 5.87.0 compiled successfully
+webpack 5.88.2 compiled successfully
 ```
